@@ -19,6 +19,13 @@ describe("chunk", () => {
     expect(chunk([], 2)).toEqual([]);
   });
 
+  it("should handle the multidimensional inputs", () => {
+    expect(chunk([[[[2]]], 4, 7, [2]], 2)).toEqual([
+      [[[[2]]], 4],
+      [7, [2]],
+    ]);
+  });
+
   it("should handle chunk size of 1", () => {
     expect(chunk([1, 2, 3, 4], 1)).toEqual([[1], [2], [3], [4]]);
   });
