@@ -22,7 +22,7 @@ describe('chunk', () => {
     });
 
     it('should throw an error for non-array input', () => {
-        // expect(() => chunk({}, 2)).toThrow('Invalid input');
+        expect(() => chunk({} as any, 2)).toThrow('Invalid input');
         expect(() => chunk(null as any, 2)).toThrow('Invalid input');
         expect(() => chunk(undefined as any, 2)).toThrow('Invalid input');
     });
