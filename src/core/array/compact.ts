@@ -7,11 +7,11 @@
  * @returns {T[]} Returns the new array of filtered values.
  */
 function compact<T>(array: T[]): T[] {
-    if (!Array.isArray(array)) {
-        throw new TypeError('Expected an array');
-    }
+  if (!Array.isArray(array)) {
+    throw new TypeError("Expected an array");
+  }
 
-    return array.filter(Boolean) as T[];
+  return array.filter(Boolean) as T[];
 }
 
-export { compact }
+export { compact };

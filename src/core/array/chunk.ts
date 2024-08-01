@@ -8,19 +8,19 @@
  * @returns {T[][]} Returns the new array of chunks.
  */
 function chunk<T>(array: T[], size: number): T[][] {
-    // Throw error if the first parameter is not a array or have a size smaller than 1
+  // Throw error if the first parameter is not a array or have a size smaller than 1
 
-    if (!Array.isArray(array) || size < 1) {
-        throw new TypeError('Invalid input');
-    }
+  if (!Array.isArray(array) || size < 1) {
+    throw new TypeError("Invalid input");
+  }
 
-    const result: T[][] = [];
+  const result: T[][] = [];
 
-    for (let i = 0; i < array.length; i += size) {
-        result.push(array.slice(i, i + size));
-    }
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
 
-    return result;
+  return result;
 }
 
-export { chunk }
+export { chunk };
