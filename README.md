@@ -1,11 +1,5 @@
 # jive
 
-
-Certainly! Here's a list of some of the most useful and important functions from lodash:
-
-1. **`_.debounce`**  
-   - **Purpose:** Creates a debounced function that delays invoking the provided function until after a specified delay has elapsed since the last time it was invoked.
-
 2. **`_.throttle`**  
    - **Purpose:** Creates a throttled function that only invokes the provided function at most once per specified interval.
 
