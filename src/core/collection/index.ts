@@ -1,1 +1,1 @@
-export { countBy } from "./countBy"
+export { countBy } from "./countBy";

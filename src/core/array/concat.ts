@@ -1,5 +1,3 @@
-// src/core/concat.ts
-
 /**
  * Concatenates multiple arrays or values into a single array.
  *
