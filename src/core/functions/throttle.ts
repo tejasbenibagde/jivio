@@ -1,3 +1,5 @@
+// this function is not working
+
 /**
  * Creates a throttled function that only invokes `func` at most once per `wait` milliseconds.
  *
