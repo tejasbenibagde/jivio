@@ -1,5 +1,3 @@
-// this function is not working
-
 /**
  * Creates a throttled function that only invokes `func` at most once per `wait` milliseconds.
  *
@@ -11,25 +9,25 @@ function throttle<F extends (...args: unknown[]) => void>(
   func: F,
   wait: number,
 ): (...args: Parameters<F>) => void {
-  let lastCall = 0;
-  let timeout: NodeJS.Timeout | undefined;
+  let timeout: NodeJS.Timeout | null = null;
+  let lastArgs: Parameters<F> | null = null;
+
+  const later = function (this: unknown) {
+    if (lastArgs) {
+      func.apply(this, lastArgs);
+      lastArgs = null;
+      timeout = setTimeout(later.bind(this), wait);
+    } else {
+      timeout = null;
+    }
+  };
 
   return function (this: unknown, ...args: Parameters<F>) {
-    const now = Date.now();
-    const remaining = wait - (now - lastCall);
-
-    if (timeout) {
-      clearTimeout(timeout);
-    }
-
-    if (remaining <= 0) {
-      lastCall = now;
+    if (!timeout) {
       func.apply(this, args);
+      timeout = setTimeout(later.bind(this), wait);
     } else {
-      timeout = setTimeout(() => {
-        lastCall = Date.now();
-        func.apply(this, args);
-      }, remaining);
+      lastArgs = args;
     }
   };
 }
