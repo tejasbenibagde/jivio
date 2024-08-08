@@ -1,31 +1,31 @@
-# jive
+# jivio
 
-[![npm version](https://img.shields.io/npm/v/jive.svg)](https://www.npmjs.com/package/jive)
+[![npm version](https://img.shields.io/npm/v/jivio.svg)](https://www.npmjs.com/package/jivio)
 
-Jive is a lightweight utility library inspired by Lodash, implemented in TypeScript. It provides a collection of essential functions to simplify your JavaScript and TypeScript code.
+jivio is a lightweight utility library inspired by Lodash, implemented in TypeScript. It provides a collection of essential functions to simplify your JavaScript and TypeScript code.
 
 # Installation
 
-Install jive via npm:
+Install jivio via npm:
 
 ```bash
-    npm install jive
+    npm install jivio
 ```
 
 or with yarn:
 
 ```bash
-    yarn install jive
+    yarn install jivio
 ```
 
 ### Usage
 
-Jive functions can be imported individually or as a whole:
+jivio functions can be imported individually or as a whole:
 
 #### ES6 Imports:
 
 ```js
-import { chunk, compact } from "jive";
+import { chunk, compact } from "jivio";
 
 const array = [1, 2, 3, 4, 5, 6];
 const chunks = chunk(array, 2);
@@ -38,7 +38,7 @@ const compacted = compact([0, 1, false, 2, "", 3]);
 #### CommonJS Imports:
 
 ```js
-const { debounce, throttle } = require("jive");
+const { debounce, throttle } = require("jivio");
 
 const debouncedFunc = debounce(() => {
   console.log("Debounced function call");
@@ -73,4 +73,4 @@ const throttledFunc = throttle(() => {
 - `cloneDeep(value)`: Creates a deep copy of value, recursively copying all nested properties.
   npm install animex
 
-**[`Back to top ⬆️`](#jive)**
+**[`Back to top ⬆️`](#jivio)**
