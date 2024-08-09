@@ -13,6 +13,16 @@
   },
   "author": "Tejas Benibagde",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "https://github.com/tejasbenibagde/jivio.git"
+  },
+  "contributors": [
+    "Tejas Benibagde tejas.benibagde@gmail.com"
+  ],
+  "bugs": {
+    "url": "https://github.com/tejasbenibagde/jivio/issues"
+  },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@types/jest": "^29.5.12",

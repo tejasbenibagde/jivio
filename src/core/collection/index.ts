@@ -1,2 +1,2 @@
 export { countBy } from "./countBy";
-export { flatMap } from "./flatMap"
+export { flatMap } from "./flatMap";
