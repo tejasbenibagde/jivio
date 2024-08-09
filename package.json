@@ -1,13 +1,13 @@
 {
-  "name": "jive",
-  "version": "1.0.0",
+  "name": "jivio",
+  "version": "1.0.2-beta.0",
   "description": "Groove Your Code",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "format": "prettier --write src/**/*.{ts,tsx}",
     "build": "tsc",
-    "start": "node dist/index.js",
     "dev": "tsc --watch",
     "test": "jest"
   },

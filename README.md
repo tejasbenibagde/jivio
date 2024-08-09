@@ -1,42 +1,76 @@
-# jive
+# jivio
 
-2. **`_.throttle`**  
-   - **Purpose:** Creates a throttled function that only invokes the provided function at most once per specified interval.
+[![npm version](https://img.shields.io/npm/v/jivio.svg)](https://www.npmjs.com/package/jivio)
 
-3. **`_.cloneDeep`**  
-   - **Purpose:** Creates a deep copy of a value, including all nested objects and arrays.
+jivio is a lightweight utility library inspired by Lodash, implemented in TypeScript. It provides a collection of essential functions to simplify your JavaScript and TypeScript code.
 
-4. **`_.merge`**  
-   - **Purpose:** Recursively merges own and inherited properties of source objects into the destination object.
+# Installation
 
-5. **`_.map`**  
-   - **Purpose:** Creates an array of values by running each element in a collection through the provided function.
+Install jivio via npm:
 
-6. **`_.filter`**  
-   - **Purpose:** Creates an array of values that pass a predicate function.
+```bash
+    npm install jivio
+```
 
-7. **`_.find`**  
-   - **Purpose:** Returns the first element that matches a predicate function.
+or with yarn:
 
-8. **`_.uniq`**  
-   - **Purpose:** Creates a duplicate-free version of an array.
+```bash
+    yarn install jivio
+```
 
-9. **`_.sortBy`**  
-   - **Purpose:** Creates an array of elements sorted by the iteratee function.
+### Usage
 
-10. **`_.get`**  
-    - **Purpose:** Retrieves the value at a path of an object.
+jivio functions can be imported individually or as a whole:
 
-11. **`_.set`**  
-    - **Purpose:** Sets the value at a path of an object.
+#### ES6 Imports:
 
-12. **`_.pick`**  
-    - **Purpose:** Creates an object composed of the picked properties.
+```js
+import { chunk, compact } from "jivio";
 
-13. **`_.omit`**  
-    - **Purpose:** Creates an object composed of the properties not omitted.
+const array = [1, 2, 3, 4, 5, 6];
+const chunks = chunk(array, 2);
+// [[1, 2], [3, 4], [5, 6]]
 
-14. **`_.groupBy`**  
-    - **Purpose:** Creates an object composed of keys generated from the results of running each element of a collection through a function.
+const compacted = compact([0, 1, false, 2, "", 3]);
+// [1, 2, 3]
+```
 
-These functions are among the most frequently used in lodash and cover a wide range of common programming tasks, from handling arrays and objects to optimizing performance.
+#### CommonJS Imports:
+
+```js
+const { debounce, throttle } = require("jivio");
+
+const debouncedFunc = debounce(() => {
+  console.log("Debounced function call");
+}, 200);
+
+const throttledFunc = throttle(() => {
+  console.log("Throttled function call");
+}, 200);
+```
+
+## Available Functions
+
+### Array Functions:
+
+- `chunk(array, size)`: Splits an array into groups of the specified size.
+- `compact(array)`: Removes falsey values from an array.
+- `concat(array, ...values)`: Merges arrays and/or values into a new array.
+- `difference(array, ...values)`: Returns the values from the first array not present in any of the other arrays.
+- `differenceBy(array, ...values, iteratee)`: Same as difference, but accepts an iteratee to apply to each element for comparison.
+
+### Collection Functions:
+
+- `countBy(collection, iteratee)`: Groups elements of a collection based on the result of running each element through the iteratee, returning an object with counts.
+
+### Function Utilities:
+
+- `debounce(func, wait)`: Creates a debounced function that delays invoking func until after wait milliseconds have passed since the last invocation.
+- `throttle(func, wait)`: Creates a throttled function that only invokes func at most once per every wait milliseconds.
+
+### Lang Functions:
+
+- `cloneDeep(value)`: Creates a deep copy of value, recursively copying all nested properties.
+  npm install animex
+
+**[`Back to top ⬆️`](#jivio)**
