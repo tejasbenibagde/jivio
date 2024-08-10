@@ -1,5 +1,7 @@
 // export { merge } from "./merge";
 
-const pokemon = "pikachu";
-
-export { pokemon };
+export { pick } from "./pick";
+export { omit } from "./omit";
+export { get } from "./get";
+export { set } from "./set";
+export { has } from "./has";

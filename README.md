@@ -58,6 +58,16 @@ const throttledFunc = throttle(() => {
 - `concat(array, ...values)`: Merges arrays and/or values into a new array.
 - `difference(array, ...values)`: Returns the values from the first array not present in any of the other arrays.
 - `differenceBy(array, ...values, iteratee)`: Same as difference, but accepts an iteratee to apply to each element for comparison.
+- `flatten(array, depth)`: Flattens a nested array to a specified depth.
+- `uniq(array)`: Removes duplicate values from an array.
+- `zip(...arrays)`: Combines arrays into a single array of grouped elements.
+- `unzip(array)`: Splits an array of grouped elements into separate arrays.
+
+### Object Functions:
+
+- `get(obj, path, defaultValue)`: Safely gets a nested property in an object.
+- `set(obj, path, value)`: Safely sets a nested property in an object.
+- `has(obj, path)`: Checks if a nested property exists within an object.
 
 ### Collection Functions:
 
@@ -72,5 +82,8 @@ const throttledFunc = throttle(() => {
 
 - `cloneDeep(value)`: Creates a deep copy of value, recursively copying all nested properties.
   npm install animex
+
+# LICENSE
+- MIT License
 
 **[`Back to top ⬆️`](#jivio)**
