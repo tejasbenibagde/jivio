@@ -68,6 +68,8 @@ const throttledFunc = throttle(() => {
 - `get(obj, path, defaultValue)`: Safely gets a nested property in an object.
 - `set(obj, path, value)`: Safely sets a nested property in an object.
 - `has(obj, path)`: Checks if a nested property exists within an object.
+- `pick(obj, keys)`: Creates an object composed of selected properties.
+- `omit(obj, keys)`: Creates an object composed of omitted properties.
 
 ### Collection Functions:
 
@@ -77,6 +79,10 @@ const throttledFunc = throttle(() => {
 
 - `debounce(func, wait)`: Creates a debounced function that delays invoking func until after wait milliseconds have passed since the last invocation.
 - `throttle(func, wait)`: Creates a throttled function that only invokes func at most once per every wait milliseconds.
+
+### Number Utilities:
+
+- `numberToWords(number)`: Converts a number into its word representation.
 
 ### Lang Functions:
 
